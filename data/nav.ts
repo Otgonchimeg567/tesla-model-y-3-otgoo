@@ -5,7 +5,11 @@ export const navLinks = [
   { label: "Нээн судлах", href: "#" },
 ];
 
-export const footerLinks = [...navLinks, { label: "Дэлгүүр", href: "#" }];
+export const footerLinks = [
+  ...navLinks,
+  { label: "Дэлгүүр", href: "#" },
+  { label: "Дизайн систем", href: "/styleguide" },
+];
 
 export const legalLinks = [
   { label: "Нууцлалын бодлого", href: "#" },
