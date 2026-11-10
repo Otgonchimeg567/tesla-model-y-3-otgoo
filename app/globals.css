@@ -7,7 +7,8 @@
   --color-ink: #020208;
   --color-ink-5: rgba(2, 2, 8, 0.05);
   --color-line: rgba(2, 2, 8, 0.15);
-  --color-primary: #26289d;
+  /* Green-700: dark enough that white button text stays readable */
+  --color-primary: #15803d;
 
   --text-h1: 72px;
   --text-h1--line-height: 1.2;
