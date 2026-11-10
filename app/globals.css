@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* Design tokens (from the Figma file) */
+@theme {
+  --color-surface: #f2f2f2;
+  --color-card: #ffffff;
+  --color-ink: #020208;
+  --color-ink-5: rgba(2, 2, 8, 0.05);
+  --color-line: rgba(2, 2, 8, 0.15);
+  --color-primary: #26289d;
+
+  --text-h1: 72px;
+  --text-h1--line-height: 1.2;
+  --text-h1--letter-spacing: -0.01em;
+  --text-h1--font-weight: 500;
+  --text-h2: 52px;
+  --text-h2--line-height: 1.2;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h2--font-weight: 500;
+  --text-h6: 22px;
+  --text-h6--line-height: 1.4;
+  --text-h6--letter-spacing: -0.01em;
+  --text-h6--font-weight: 500;
+  --text-md: 18px;
+  --text-md--line-height: 1.5;
+
+  /* px-page, py-section, -mr-page ... */
+  --spacing-page: 64px;
+  --spacing-section: 112px;
+
+  /* max-w-site (not "page": that name is taken by the 64px spacing token) */
+  --container-site: 1280px;
+  --radius-card: 16px;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter-next), sans-serif;
+  --font-roboto: var(--font-roboto-next), sans-serif;
+}
+
+/* Smaller headings and spacing on tablet and phone */
+@media (width < 64rem) {
+  :root {
+    --text-h1: 56px;
+    --text-h2: 44px;
+    --spacing-page: 32px;
+    --spacing-section: 80px;
+  }
+}
+@media (width < 40rem) {
+  :root {
+    --text-h1: 40px;
+    --text-h2: 32px;
+    --spacing-page: 16px;
+    --spacing-section: 64px;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-ink font-sans text-base leading-normal;
+  }
+}
+
+/* Hide scrollbars on slider tracks */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
