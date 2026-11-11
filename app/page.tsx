@@ -10,9 +10,12 @@ import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 import Slider from "@/components/ui/Slider";
-import { energy, promos, vehicles } from "@/data/home";
+import { energy, promos } from "@/data/home";
+import { getVehicles } from "@/lib/vehicles";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const vehicles = await getVehicles();
+
   return (
     <>
       <Hero
